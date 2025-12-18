@@ -16,6 +16,6 @@
     </div>
 
     <div class="d-flex justify-content-center mt-3">
-        <x-message-board-card />
+        <x-messages.go-to-message-board-card />
     </div>
 </x-layouts.app>

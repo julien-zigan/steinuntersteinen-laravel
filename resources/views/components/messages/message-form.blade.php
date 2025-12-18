@@ -1,4 +1,3 @@
-{{-- New Message Form --}}
 <div class="card bg-transparent border-0 d-flex justify-content-center align-items-center">
     <img src="{{ asset('img/wish-card-bg.png') }}"
          alt="christmas presents"
@@ -29,5 +28,4 @@
         </form>
     </div>
 </div>
-</div>
-{{-- Ende --}}
+

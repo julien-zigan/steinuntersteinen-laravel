@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -37,5 +38,27 @@ class MessageBoardController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Message sent successfully!');
+    }
+
+    public function edit(Message $message)
+    {
+    }
+
+    public function update(Request $request, Message $message)
+    {
+        $validated = $request->validate([
+            'message' => 'required|string|max:255'
+        ]);
+
+        $message->update($validated);
+
+        return redirect(route('message-board'))->with(
+            'success', 'Message updated successfully!'
+        );
+    }
+
+    public function destroy(Message $message)
+    {
+
     }
 }

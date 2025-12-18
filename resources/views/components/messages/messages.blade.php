@@ -21,6 +21,21 @@
                             <a href="{{ $message['link'] }}" target="_blank" class="text-white text-break mx-3">{{ $message['link'] }}</a>
                         </p>
                     @endif
+                    <div class="d-flex justify-content-between mt-2">
+                        <a href="/message-board/{{ $message }}/edit" class="btn btn-secondary">Bearbeiten</a>
+
+                        <form method="POST" action="/message-board/{{ $message->id }}">
+                            @csrf
+                            @method('DELETE')
+                            <button
+                                type="submit"
+                                class="btn btn-outline-danger fw-bold"
+                                onclick="return confirm('Wollen Sie diesen Wunsch dauerhaft löschen?')">
+                                Löschen
+                            </button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>

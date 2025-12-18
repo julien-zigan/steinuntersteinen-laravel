@@ -17,9 +17,9 @@
     <div class="max-w-2xl mx-auto"  >
         <h1 class="text-center text-danger fw-bold mb-3">Wunschliste</h1>
 
-        <x-message-form />
+        <x-messages.message-form />
 
-        <x-messages :messages="$messages" />
+        <x-messages.messages :messages="$messages" />
 
     </div>
 </x-layouts.app>
