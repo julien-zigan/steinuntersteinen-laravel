@@ -8,91 +8,11 @@ use Illuminate\Pagination\LengthAwarePaginator;
 class MessageBoardController extends Controller
 {
     public function index() {
-        $messagesFromDb = [
-            [
-                'author' => 'Max Mustermann',
-                'message' => 'Ein Modelleisnbahn-Set',
-                'link' => 'https://www.amazon.de',
-                'status' => 'geposted',
-                'updated_at' => '14:32'
 
-            ],
-            [
-                'author' => 'Maria Musterfrau',
-                'message' => 'Ein Auto',
-                'link' => 'https://www.amazon.de',
-                'status' => 'bearbeitet',
-                'updated_at' => 'gestern'
-            ],
-            [
-                'author' => 'Max Mustermann',
-                'message' => 'Ein Modelleisnbahn-Set',
-                'link' => 'https://www.amazon.de',
-                'status' => 'geposted',
-                'updated_at' => '14:32'
+        $messagesFromDb = \App\Models\Message::with('user')
+            ->latest()
+            ->get();
 
-            ],
-            [
-                'author' => 'Maria Musterfrau',
-                'message' => 'Ein Auto',
-                'link' => 'https://www.amazon.de',
-                'status' => 'bearbeitet',
-                'updated_at' => 'gestern'
-            ],
-            [
-                'author' => 'Max Mustermann',
-                'message' => 'Ein Modelleisnbahn-Set',
-                'link' => 'https://www.amazon.de',
-                'status' => 'geposted',
-                'updated_at' => '14:32'
-
-            ],
-            [
-                'author' => 'Maria Musterfrau',
-                'message' => 'Ein Auto',
-                'link' => 'https://www.amazon.de',
-                'status' => 'bearbeitet',
-                'updated_at' => 'gestern'
-            ],
-            [
-                'author' => 'Max Mustermann',
-                'message' => 'Ein Modelleisnbahn-Set',
-                'link' => 'https://www.amazon.de',
-                'status' => 'geposted',
-                'updated_at' => '14:32'
-
-            ],
-            [
-                'author' => 'Maria Musterfrau',
-                'message' => 'Ein Auto',
-                'link' => 'https://www.amazon.de',
-                'status' => 'bearbeitet',
-                'updated_at' => 'gestern'
-            ],
-
-            [
-                'author' => 'Max Mustermann',
-                'message' => 'Ein Modelleisnbahn-Set',
-                'link' => 'https://www.amazon.de',
-                'status' => 'geposted',
-                'updated_at' => '14:32'
-
-            ],
-            [
-                'author' => 'Maria Musterfrau',
-                'message' => 'Ein Auto',
-                'link' => 'https://www.amazon.de',
-                'status' => 'bearbeitet',
-                'updated_at' => 'gestern'
-            ],
-            [
-                'author' => 'Susanne Sample',
-                'message' => 'Ein Lächeln',
-                'link' => '',
-                'status' => 'gepostet',
-                'updated_at' => 'vor 9 Tagen'
-            ]
-        ];
         $items = collect($messagesFromDb);
         $perPage = 6;
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
