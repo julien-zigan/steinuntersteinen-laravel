@@ -6,7 +6,15 @@
         <title>{{ isset($title) ? $title . ' - Juliens Laravel-Kenntnisse' : 'Juliens Laravel-Kenntnisse'}} </title>
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     </head>
-    <body class="d-flex flex-column  min-vh-100 bg-body-tertiary">
+    <body class="d-flex flex-column  min-vh-100 bg-body-tertiaryd"
+          @if(isset($pageBackground))
+              style="background-image: url( {{ $pageBackground }});
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+                    min-height: 100vh;
+                    width: 100%;"
+          @endif>
         <x-navbar />
 
         <main class="container py-5 grow ">

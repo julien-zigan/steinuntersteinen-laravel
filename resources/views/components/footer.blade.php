@@ -8,11 +8,9 @@
             </div>
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nützliche Links</h5>
-                <p><a href="/" class="text-white text-decoration-none">Home</a></p>
-                <p><a href="/about" class="text-white text-decoration-none">Über mich</a></p>
-                <p><a href="/contact" class="text-white text-decoration-none">Kontakt</a></p>
-                <p><a href="/terms" class="text-white text-decoration-none">AGB</a></p>
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Sitemap</h5>
+                <p><a href="/" class="text-white text-decoration-none">Start</a></p>
+                <p><a href="{{ route('message-board') }}" class="text-white text-decoration-none">Wunschliste</a></p>
             </div>
 
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">

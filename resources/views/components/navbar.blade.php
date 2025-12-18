@@ -14,23 +14,20 @@
                     <a class="nav-link active" href="/">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/services">Skills</a>
+                    <a class="nav-link" href="{{ route('message-board') }}">Wunschliste</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        Resourcen
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">Documentation</a></li>
-                        <li><a class="dropdown-item" href="#">Tutorials</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Support</a></li>
-                    </ul>
-                </li>
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">--}}
+{{--                        Resourcen--}}
+{{--                    </a>--}}
+{{--                    <ul class="dropdown-menu dropdown-menu-dark">--}}
+{{--                        <li><a class="dropdown-item" href="#">Documentation</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Tutorials</a></li>--}}
+{{--                        <li><hr class="dropdown-divider"></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Support</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
 
             <div class="d-flex align-items-center">
