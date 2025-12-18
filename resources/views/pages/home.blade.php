@@ -11,4 +11,8 @@
             </div>
         </div>
     </div>
+
+    <div class="d-flex justify-content-center mt-3">
+        <x-message-board-card />
+    </div>
 </x-layouts.app>

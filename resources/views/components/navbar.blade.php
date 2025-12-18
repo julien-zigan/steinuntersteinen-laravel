@@ -14,10 +14,7 @@
                     <a class="nav-link active" href="/">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/services">Skills</a>
+                    <a class="nav-link" href="{{ route('message-board') }}">Wunschliste</a>
                 </li>
 
                 <li class="nav-item dropdown">
