@@ -7,3 +7,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/message-board', [MessageBoardController::class, 'index'])->name('message-board');
+Route::post('/message-board', [MessageBoardController::class, 'store'])->name('message-board.store');

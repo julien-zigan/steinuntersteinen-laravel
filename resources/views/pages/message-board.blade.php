@@ -1,14 +1,23 @@
 <x-layouts.app>
     <x-slot:title>Wunschliste</x-slot:title>
     <x-slot:pageBackground>
-        style="background-image: url({{ asset('img/pile-black-wrapped-gifts-copy-space.jpg')  }})"
+       {{ asset('img/pile-black-wrapped-gifts-copy-space.jpg') }}
     </x-slot:pageBackground>
 
-    <div class="max-w-2xl mx-auto"  >
-        <div class="d-flex   align-items-center mb-4">
-            <h1 class="d-inline-block text-3xl text-danger font-bold">Wunschliste</h1>
-            <a href="" class="btn btn-success mx-5">Füge Deinen Wunsch hinzu!</a>
+
+    <!-- Success Toast -->
+    @if (session('success'))
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Ihre Nachricht wurde an den Weihnachtsmann gesendet.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+    @endif
+
+    <div class="max-w-2xl mx-auto"  >
+        <h1 class="text-center text-danger fw-bold mb-3">Wunschliste</h1>
+
+        <x-message-form />
 
         <x-messages :messages="$messages" />
 

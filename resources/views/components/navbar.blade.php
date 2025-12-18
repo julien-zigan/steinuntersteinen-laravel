@@ -17,17 +17,17 @@
                     <a class="nav-link" href="{{ route('message-board') }}">Wunschliste</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        Resourcen
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">Documentation</a></li>
-                        <li><a class="dropdown-item" href="#">Tutorials</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Support</a></li>
-                    </ul>
-                </li>
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">--}}
+{{--                        Resourcen--}}
+{{--                    </a>--}}
+{{--                    <ul class="dropdown-menu dropdown-menu-dark">--}}
+{{--                        <li><a class="dropdown-item" href="#">Documentation</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Tutorials</a></li>--}}
+{{--                        <li><hr class="dropdown-divider"></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Support</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
 
             <div class="d-flex align-items-center">

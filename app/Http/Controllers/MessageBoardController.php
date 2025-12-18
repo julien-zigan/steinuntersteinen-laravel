@@ -14,7 +14,7 @@ class MessageBoardController extends Controller
             ->get();
 
         $items = collect($messagesFromDb);
-        $perPage = 6;
+        $perPage = 4;
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $currentItems = $items->slice(($currentPage - 1) * $perPage, $perPage)->all();
         $messages = new LengthAwarePaginator(
@@ -25,5 +25,17 @@ class MessageBoardController extends Controller
             ['path' => LengthAwarePaginator::resolveCurrentPath()]
         );
         return view('pages.message-board', compact('messages'));
+    }
+
+    public function store(Request $request) {
+        $validated = $request->validate([
+            'message' => 'required|string|max:255'
+        ]);
+
+        \App\Models\Message::create([
+            'message' => $validated['message']
+        ]);
+
+        return redirect()->back()->with('success', 'Message sent successfully!');
     }
 }

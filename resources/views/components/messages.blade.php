@@ -1,6 +1,6 @@
 @props(['messages'])
 
-<div class="row">
+<div class="row mt-1">
     @forelse($messages as $message)
         <div class="col-md-6 mb-4"> {{-- Each item takes 6/12 slots (half width) --}}
             <div class="card shadow h-100"
